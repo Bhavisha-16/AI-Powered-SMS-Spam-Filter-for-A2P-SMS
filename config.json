@@ -1,0 +1,8 @@
+{
+  "whitelist": {
+    "domains": ["trip.com", "icicibank.com"],
+    "phrases": ["Your OTP is", "Thank you for shopping with"],
+    "sender_ids": ["ICICI", "AMZ"]
+  },
+  "log_file":"logs.csv"
+}
