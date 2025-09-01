@@ -24,40 +24,40 @@ This solution can be integrated into **telecom platforms, enterprise messaging s
 
 1. Clone the Repository
 
-git clone https://github.com/Bhavisha-16/AI-Powered-SMS-Spam-Filter-for-A2P-SMS
+ git clone https://github.com/Bhavisha-16/AI-Powered-SMS-Spam-Filter-for-A2P-SMS
 
 
 
 2. Build the Docker Image
 
-docker build -t sms-filter:latest .
+ docker build -t sms-filter:latest .
 
 
 3. Run the Docker Container
 
-docker run -d --name sms-filter -p 8000:8000 sms-filter:latest
+ docker run -d --name sms-filter -p 8000:8000 sms-filter:latest
 
 
 4. Access the API
 
-Open http://127.0.0.1:8000/docs#/default/predict_get_predict_get
+ Open http://127.0.0.1:8000/docs#/default/predict_get_predict_get
  in your browser.
 
-You will see an interactive Swagger UI to test predictions.
+ You will see an interactive Swagger UI to test predictions.
 
 5. Send a Sample Request
 
-curl -X POST "http://127.0.0.1:8000/predict" \
--H "Content-Type: application/json" \
--d '{"message": "Congratulations! You have won a free voucher"}'
+ curl -X POST "http://127.0.0.1:8000/predict" \
+ -H "Content-Type: application/json" \
+ -d '{"message": "Congratulations! You have won a free voucher"}'
 
 
-Response Example:
+ Response Example:
 
-{
-  "message": "Congratulations! You have won a free voucher",
-  "prediction": "Spam"
-}
+ {
+   "message": "Congratulations! You have won a free voucher",
+   "prediction": "Spam"
+ }
 
 ## Render Deployment
 Base URL: https://ai-powered-sms-spam-filter-for-a2p-sms.onrender.com
